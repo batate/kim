@@ -5,7 +5,6 @@ defmodule KimTest do
     assert Kim.hey("Tom-ay-to, tom-aaaah-to.") == "Whatever."
   end
 
-  @tag :pending
   test "shouting" do
     assert Kim.hey("WATCH OUT!") == "Whoa, chill out!"
   end
