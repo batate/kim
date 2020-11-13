@@ -38,27 +38,27 @@ defmodule KimTest do
     assert Kim.hey("This Isn't Shouting!") == "Whatever."
   end
 
-@tag :pending
+
   test "forceful question" do
     assert Kim.hey("WHAT'S GOING ON?") == "Calm down, I know what I'm doing!"
   end
 
-  @tag :pending
+
   test "asking in capitals" do
     assert Kim.hey("THIS ISN'T SHOUTING?") == "Calm down, I know what I'm doing!"
   end
 
-  @tag :pending
+
   test "shouting numbers" do
     assert Kim.hey("1, 2, 3 GO!") == "Whoa, chill out!"
   end
 
-  @tag :pending
+
   test "shouting with special characters" do
     assert Kim.hey("ZOMG THE %^*@#$(*^ ZOMBIES ARE COMING!!11!!1!") == "Whoa, chill out!"
   end
 
-  @tag :pending
+
   test "shouting with no exclamation mark" do
     assert Kim.hey("I HATE THE DENTIST") == "Whoa, chill out!"
   end
