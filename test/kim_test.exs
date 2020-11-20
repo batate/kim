@@ -17,7 +17,6 @@ defmodule KimTest do
     assert Kim.hey("Does this cryogenic chamber make me look fat?") == "Sure."
   end
 
-
   test "asking a numeric question" do
     assert Kim.hey("You are, what, like 15?") == "Sure."
   end
@@ -38,26 +37,21 @@ defmodule KimTest do
     assert Kim.hey("This Isn't Shouting!") == "Whatever."
   end
 
-
   test "forceful question" do
     assert Kim.hey("WHAT'S GOING ON?") == "Calm down, I know what I'm doing!"
   end
-
 
   test "asking in capitals" do
     assert Kim.hey("THIS ISN'T SHOUTING?") == "Calm down, I know what I'm doing!"
   end
 
-
   test "shouting numbers" do
     assert Kim.hey("1, 2, 3 GO!") == "Whoa, chill out!"
   end
 
-
   test "shouting with special characters" do
     assert Kim.hey("ZOMG THE %^*@#$(*^ ZOMBIES ARE COMING!!11!!1!") == "Whoa, chill out!"
   end
-
 
   test "shouting with no exclamation mark" do
     assert Kim.hey("I HATE THE DENTIST") == "Whoa, chill out!"
@@ -67,7 +61,6 @@ defmodule KimTest do
     assert Kim.hey("Ending with ? means a question.") == "Whatever."
   end
 
-  @tag :pending
   test "silence" do
     assert Kim.hey("") == "Fine. Be that way!"
   end
@@ -87,12 +80,11 @@ defmodule KimTest do
     assert Kim.hey("1, 2, 3") == "Whatever."
   end
 
-
   test "multiple line question" do
     assert Kim.hey("\nDoes this cryogenic chamber make me look fat?\nNo.") == "Whatever."
   end
 
-@tag :pending
+  @tag :pending
   test "question with numbers" do
     assert Kim.hey("4?") == "Sure."
   end
@@ -125,7 +117,6 @@ defmodule KimTest do
   test "non-question ending with whitespace" do
     assert Kim.hey("This is a statement ending with whitespace     ") == "Whatever."
   end
-
 
   test "shouting in Russian" do
     assert Kim.hey("УХОДИ") == "Whoa, chill out!"
