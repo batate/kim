@@ -65,17 +65,15 @@ defmodule KimTest do
     assert Kim.hey("") == "Fine. Be that way!"
   end
 
-  @tag :pending
   test "prolonged silence" do
     assert Kim.hey("  ") == "Fine. Be that way!"
   end
 
-  @tag :pending
   test "alternate silence" do
     assert Kim.hey("\t\t\t\t\t\t\t\t\t\t") == "Fine. Be that way!"
   end
 
-  @tag :pending
+
   test "only numbers" do
     assert Kim.hey("1, 2, 3") == "Whatever."
   end
@@ -83,8 +81,7 @@ defmodule KimTest do
   test "multiple line question" do
     assert Kim.hey("\nDoes this cryogenic chamber make me look fat?\nNo.") == "Whatever."
   end
-
-  @tag :pending
+@tag :pending
   test "question with numbers" do
     assert Kim.hey("4?") == "Sure."
   end
@@ -98,22 +95,18 @@ defmodule KimTest do
     assert Kim.hey("Wait! Hang on. Are you going to be OK?") == "Sure."
   end
 
-  @tag :pending
   test "starting with whitespace" do
     assert Kim.hey("         hmmmmmmm...") == "Whatever."
   end
 
-  @tag :pending
   test "ending with whitespace" do
     assert Kim.hey("Okay if like my  spacebar  quite a bit?   ") == "Sure."
   end
 
-  @tag :pending
   test "other whitespace" do
     assert Kim.hey("\n\r \t") == "Fine. Be that way!"
   end
 
-  @tag :pending
   test "non-question ending with whitespace" do
     assert Kim.hey("This is a statement ending with whitespace     ") == "Whatever."
   end
